@@ -1,0 +1,31 @@
+{
+    "iteration": 3,
+    "metrics": {
+        "train": {
+            "mae": 8.843723775159996,
+            "mse": 181.0829918911649,
+            "r2": 0.7034261634727258,
+            "adj_r2": NaN
+        },
+        "test": {
+            "mae": 20.783965235645866,
+            "mse": 760.4185607111859,
+            "r2": 0.3191299818816842,
+            "adj_r2": NaN
+        }
+    },
+    "selected_features": [
+        "TDOS3.9",
+        "TDOS4.0",
+        "TDOS4.1"
+    ],
+    "hyperparameters": {
+        "bootstrap": true,
+        "max_depth": 15,
+        "max_features": "log2",
+        "min_samples_leaf": 2,
+        "min_samples_split": 7,
+        "n_estimators": 44,
+        "oob_score": false
+    }
+}

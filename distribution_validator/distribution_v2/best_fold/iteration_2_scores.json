@@ -1,0 +1,31 @@
+{
+    "iteration": 2,
+    "metrics": {
+        "train": {
+            "mae": 11.103298493111133,
+            "mse": 238.08624800216063,
+            "r2": 0.6079562003802498,
+            "adj_r2": NaN
+        },
+        "test": {
+            "mae": 15.802552194154302,
+            "mse": 355.4146401226387,
+            "r2": 0.6823614176690946,
+            "adj_r2": NaN
+        }
+    },
+    "selected_features": [
+        "S6",
+        "TDOS4.0",
+        "SDOS3.7"
+    ],
+    "hyperparameters": {
+        "bootstrap": false,
+        "max_depth": 3,
+        "max_features": "log2",
+        "min_samples_leaf": 4,
+        "min_samples_split": 6,
+        "n_estimators": 39,
+        "oob_score": false
+    }
+}

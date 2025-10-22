@@ -1,0 +1,30 @@
+{
+    "iteration": 4,
+    "metrics": {
+        "train": {
+            "mae": 8.092482122432394,
+            "mse": 103.45043339026985,
+            "r2": 0.8630561851553769,
+            "adj_r2": NaN
+        },
+        "test": {
+            "mae": 17.484589467669462,
+            "mse": 620.2896677889959,
+            "r2": -0.11157805289985046,
+            "adj_r2": NaN
+        }
+    },
+    "selected_features": [
+        "Mass",
+        "S3"
+    ],
+    "hyperparameters": {
+        "bootstrap": false,
+        "max_depth": 14,
+        "max_features": "log2",
+        "min_samples_leaf": 3,
+        "min_samples_split": 9,
+        "n_estimators": 122,
+        "oob_score": false
+    }
+}

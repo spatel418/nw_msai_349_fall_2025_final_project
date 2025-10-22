@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "northwestern_u_msai_349_final_project"
+version = "0.1.0"
+package-mode = false
+description = ""
+authors = ["Simron Patel"]
+readme = "README.md"
+
+[tool.pytest.ini_options]
+pythonpath = ['backend']
+
+[tool.poetry.dependencies]
+python = "^3.12.6"
+#chemetrianbo = { git = "https://gitlab.com/spatel418/chemetrian-bayesian-optimization.git", branch = 'main' }
+fastapi = {extras = ["standard"], version = "^0.112.1"}
+pydantic = "^2.8.2"
+black = {extras = ["jupyter"], version = "^24.8.0"}
+#rdkit = "^2024.3.5"
+numpy = "2.0.2"
+pandas = "^2.2.2"
+#umap-learn = "^0.5.6"
+#pony = "^0.7.16"
+#yoyo-migrations = "^9.0.0"
+#pyhumps = "^3.8.0"
+#python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+#passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+python-multipart = "^0.0.10"
+#bcrypt = "^4.2.0"
+#boto3 = "^1.35.29"
+psycopg2-binary = "^2.9.9"
+python-dotenv = "^1.0.1"
+pandera = "^0.20.4"
+xgboost = "^2.1.3"
+imbalanced-learn = "^0.12.4"
+scikit-learn = "1.5.0"
+#pytest = "^8.3.4"
+#pytest-cov = "^6.0.0"
+#shap = "^0.47.2"
+#tabpfn = {git = "https://github.com/PriorLabs/TabPFN.git", rev = "main"}
+ipykernel = "^6.30.1"
+smogn = "^0.1.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
