@@ -21,8 +21,8 @@ from sklearn.svm import SVR
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.exceptions import DataConversionWarning
 import xgboost as xgb
-from tabpfn import TabPFNRegressor
-from tabpfn_feature_importance_helper import TabPFNRegressorWithImportance
+#from tabpfn import TabPFNRegressor
+#from tabpfn_feature_importance_helper import TabPFNRegressorWithImportance
 from regression_file_validator import (
     RegressionFileValidator,
 )
@@ -529,8 +529,8 @@ class RegressionTrain:
                 cv = 10
             
             models = model_dict.copy()
-            if model_name == "tabpfn":
-                models["model"] = TabPFNRegressorWithImportance
+            #if model_name == "tabpfn":
+                #models["model"] = TabPFNRegressorWithImportance
                 
             if self.feature_selection_num > 0:
                 rfe = RFE(
@@ -764,8 +764,8 @@ class RegressionTrain:
                 cv = min(10, len(X_train))
             
             models = model_dict.copy()
-            if model_name == "tabpfn":
-                models["model"] = TabPFNRegressorWithImportance
+            #if model_name == "tabpfn":
+                #models["model"] = TabPFNRegressorWithImportance
                 
             if self.feature_selection_num > 0:
                 rfe = RFE(
@@ -1001,8 +1001,8 @@ class RegressionTrain:
                 else:
                     cv = n_splits
                 models = model_dict.copy()
-                if model_name == "tabpfn":
-                    models["model"] = TabPFNRegressorWithImportance
+                #if model_name == "tabpfn":
+                    #models["model"] = TabPFNRegressorWithImportance
                     
                 if self.feature_selection_num > 0:
                     rfe = RFE(
@@ -1276,7 +1276,7 @@ class RegressionBuilder:
         model_dict["xgboost"] = xgb.XGBRegressor
         model_dict["randomforest"] = RandomForestRegressor
         model_dict["svm"] = SVR
-        model_dict["tabpfn"] = TabPFNRegressor
+        #model_dict["tabpfn"] = TabPFNRegressor
         if isinstance(self.model_choice, list):
             model_dict = {
                 k: {"model": model_dict[k]}
