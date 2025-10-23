@@ -39,6 +39,10 @@ scikit-learn = "1.5.0"
 #tabpfn = {git = "https://github.com/PriorLabs/TabPFN.git", rev = "main"}
 ipykernel = "^6.30.1"
 smogn = "^0.1.2"
+jupyter = "^1.1.1"
+notebook = "^7.4.7"
+matplotlib = "^3.10.7"
+seaborn = "^0.13.2"
 
 [build-system]
 requires = ["poetry-core"]

@@ -1,0 +1,46 @@
+{
+    "iteration": 5,
+    "metrics": {
+        "train": {
+            "mae": 6.804341633606637,
+            "mse": 92.9650568721191,
+            "r2": 0.8766963061835946,
+            "adj_r2": NaN
+        },
+        "test": {
+            "mae": 16.878796766139164,
+            "mse": 784.7626721050045,
+            "r2": -0.5278287171199161,
+            "adj_r2": NaN
+        }
+    },
+    "selected_features": [
+        "T2",
+        "T4",
+        "T5",
+        "T6",
+        "T14",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S11",
+        "S12",
+        "S14",
+        "S16",
+        "TDOS3.7",
+        "TDOS3.8",
+        "TDOS3.9",
+        "TDOS4.0"
+    ],
+    "hyperparameters": {
+        "bootstrap": true,
+        "max_depth": 3,
+        "max_features": "log2",
+        "min_samples_leaf": 1,
+        "min_samples_split": 9,
+        "n_estimators": 58,
+        "oob_score": true
+    }
+}
