@@ -246,6 +246,7 @@ class DataAugmentationVAE:
             max_natural_count = np.max(self.region_counts)
             effective_target = max(self.min_samples_per_region, max_natural_count)
             self.target_counts = np.full_like(self.region_counts, effective_target)
+            
         else:
             # Default to equal
             self.target_counts = np.full_like(self.region_counts, np.max(self.region_counts))
