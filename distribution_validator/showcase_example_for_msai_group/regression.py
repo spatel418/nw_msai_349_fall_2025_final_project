@@ -244,7 +244,8 @@ class RegressionTrain:
         data_augmentation_min_samples_per_region = 5,
         balance_strategy = "equal",
         k = 10,
-        sampling_method = 'kfold'
+        sampling_method = 'kfold',
+        train_pct = 0.75
     ):
         self.input = input_df
         self.target = target
@@ -260,6 +261,7 @@ class RegressionTrain:
         self.balance_strategy = balance_strategy
         self.k = k 
         self.sampling_method = sampling_method
+        self.train_pct = train_pct
 
     def normalize(self, X, scaler=None):
         if scaler is None:
@@ -385,6 +387,8 @@ class RegressionTrain:
     def train_model(self, model_name, model_dict, X, y, n_splits):
         if hasattr(self, 'sampling_method') and self.sampling_method == "stratified":
             return self._train_model_stratified(model_name, model_dict, X, y)
+        elif hasattr(self, 'sampling_method') and self.sampling_method == "random":
+            return self._train_model_random(model_name, model_dict, X, y)
         else:
             return self._train_model_kfold(model_name, model_dict, X, y, n_splits)
 
@@ -529,8 +533,8 @@ class RegressionTrain:
                 cv = 10
             
             models = model_dict.copy()
-            #if model_name == "tabpfn":
-                #models["model"] = TabPFNRegressorWithImportance
+            if model_name == "tabpfn":
+                models["model"] = TabPFNRegressorWithImportance
                 
             if self.feature_selection_num > 0:
                 rfe = RFE(
@@ -764,8 +768,8 @@ class RegressionTrain:
                 cv = min(10, len(X_train))
             
             models = model_dict.copy()
-            #if model_name == "tabpfn":
-                #models["model"] = TabPFNRegressorWithImportance
+            if model_name == "tabpfn":
+                models["model"] = TabPFNRegressorWithImportance
                 
             if self.feature_selection_num > 0:
                 rfe = RFE(
@@ -901,7 +905,8 @@ class RegressionTrain:
         }
         
         # Return the metrics
-        return metrics, goal_metric_per_folds, avg_fold_metrics
+        return metrics, goal_metric_per_folds#, avg_fold_metrics
+        
     def _train_model_kfold(self, model_name, model_dict, X, y, n_splits=10):
         metrics = []
         kf = KFold(n_splits=n_splits, shuffle=True, random_state=13)
@@ -1001,8 +1006,8 @@ class RegressionTrain:
                 else:
                     cv = n_splits
                 models = model_dict.copy()
-                #if model_name == "tabpfn":
-                    #models["model"] = TabPFNRegressorWithImportance
+                if model_name == "tabpfn":
+                    models["model"] = TabPFNRegressorWithImportance
                     
                 if self.feature_selection_num > 0:
                     rfe = RFE(
