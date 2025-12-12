@@ -1,0 +1,10 @@
+{
+  "vaskas_path": "vaskas.csv",
+  "target_col": "barrier",
+  "train_size": 1557,
+  "test_size": 390,
+  "num_features": 91,
+  "num_bins": 20,
+  "min_samples_per_region": 100,
+  "timestamp": "2025-12-10T17:10:34.680251"
+}
