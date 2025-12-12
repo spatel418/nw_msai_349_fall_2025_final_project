@@ -1,0 +1,17 @@
+================================================================================
+VASKAS DATASET SUMMARY REPORT
+================================================================================
+
+Dataset Size: 1947 samples
+Number of Features: 93
+Target Variable: barrier
+
+Target Statistics:
+  Mean: 11.970
+  Std: 4.329
+  Min: 1.600
+  Max: 25.600
+  Skewness: 0.253
+
+✓  Target distribution is relatively UNIFORM
+   Data augmentation may not be necessary

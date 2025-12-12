@@ -1,0 +1,40 @@
+{
+  "n_synthetic_requested": 60,
+  "n_synthetic_generated": 60,
+  "n_original": 42,
+  "validation": {
+    "n_synthetic": 60,
+    "n_stable": 56,
+    "n_unstable": 4,
+    "stability_rate": 0.9333333333333333,
+    "physical_pass_rate": 0.9333333333333333,
+    "chemical_pass_rate": 1.0,
+    "statistical_pass_rate": 1.0
+  },
+  "accuracy_all_synthetic": {
+    "mean_mae": 14.775375247687313,
+    "std_mae": 2.002197574207028,
+    "mean_rmse": 17.96460993853128,
+    "std_rmse": 3.3406805631420187,
+    "mean_r2": 0.45294126562056414,
+    "std_r2": 0.2025567704634875
+  },
+  "accuracy_stable_only": {
+    "n_stable_used": 56,
+    "mean_mae": 15.072241716013073,
+    "std_mae": 1.7348411599737887,
+    "mean_rmse": 18.29921665489644,
+    "std_rmse": 3.0220856950809876,
+    "mean_r2": 0.43897381167041233,
+    "std_r2": 0.18372809340164434
+  },
+  "accuracy_unstable_only": {
+    "n_unstable_used": 4,
+    "mean_mae": 15.415798395217431,
+    "std_mae": 2.2117441854971687,
+    "mean_rmse": 20.122292327066674,
+    "std_rmse": 4.323179428676246,
+    "mean_r2": 0.3390019506829029,
+    "std_r2": 0.1724874028539462
+  }
+}

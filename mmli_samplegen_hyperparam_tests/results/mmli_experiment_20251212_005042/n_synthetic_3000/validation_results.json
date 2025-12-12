@@ -1,0 +1,9 @@
+{
+  "n_synthetic": 3000,
+  "n_stable": 2870,
+  "n_unstable": 130,
+  "stability_rate": 0.9566666666666667,
+  "physical_pass_rate": 0.9646666666666667,
+  "chemical_pass_rate": 1.0,
+  "statistical_pass_rate": 0.992
+}
